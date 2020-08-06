@@ -16,5 +16,5 @@ phases:
       - python webserver.py
       - echo Build completed on `date`
 artifacts:
-  - discard-paths : no
-  - base-directory : test
+  files:
+    - test/output
