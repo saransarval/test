@@ -13,7 +13,10 @@ phases:
       - python -m py_compile webserver.py
   post_build:
     commands:
+      - python webserver.py
       - echo Build completed on `date`
 artifacts:
   files:
-    - echo nothing will be done here
+    - "**/*"
+  - discard-paths : no
+  - base-directory : test
