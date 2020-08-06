@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - apt-get install python3.6
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase and python is installing...
+  build:
+    commands:
+      - echo Build started on `date`
+      - python webserver.py
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - echo nothing will be done here
